@@ -51,7 +51,7 @@ func main() {
 
 		var assignees = []string{}
 		for _, user := range issue.Assignees {
-			assignees = append(assignees, *user.Name)
+			assignees = append(assignees, *user.Login)
 		}
 
 		issueReq := &github.IssueRequest{
